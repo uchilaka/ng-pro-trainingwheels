@@ -10,6 +10,11 @@
       <input type="password" name="password" ngModel>
     </label>
     <ng-content select="auth-remember"></ng-content>
+    <div *ngIf="showMessage">
+      You will be logged in for 30 days
+    </div>
+    <ng-content select="pref-options"></ng-content>
+    <!-- @TODO figure out a way to consume the inner content of a component -->
     <ng-content select="button"></ng-content>
   </form>
 </div>
